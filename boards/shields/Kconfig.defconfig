@@ -1,0 +1,4 @@
+if SHIELD_AHMEDLEARN
+    config ZMK_BOARD_NAME
+        default "ahmedlearn"
+endif
