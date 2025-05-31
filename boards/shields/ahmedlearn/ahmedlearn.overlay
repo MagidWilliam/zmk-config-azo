@@ -24,12 +24,12 @@
         diode-direction = "row2col";
 
         col-gpios
-            = <&pro_micro 15 GPIO_ACTIVE_HIGH>
+            = <&gpio0 15 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&pro_micro 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
