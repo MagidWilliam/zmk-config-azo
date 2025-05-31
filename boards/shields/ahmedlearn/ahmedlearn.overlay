@@ -5,10 +5,10 @@
 
     physical_layout0 {
         kscan = <&kscan0>;
-        transform = <&default_transform>;
+        transform = <&keymap_transform0>;
         };
 
-     default_transform: keymap_transform0 {
+     keymap_transform0: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <1>; // Length of the "col-gpios" array
         rows = <2>; // Length of the "row-gpios" array
