@@ -1,34 +1,35 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "ahmedlearn.dtsi"
 
-/ {
 
+/ {
     physical_layout0 {
         kscan = <&kscan0>;
         transform = <&transform0>;
-        };
+    };
 
-     transform0: transform0 {
+    transform0: transform0 {
         compatible = "zmk,matrix-transform";
-        columns = <1>; // Length of the "col-gpios" array
-        rows = <2>; // Length of the "row-gpios" array
+        columns = <1>;
+        rows = <2>;
         map = <
-        //   Key 1 | Key 2
             RC(0,0) RC(0,1)
         >;
     };
 
-      kscan0: kscan0 {
+    kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "row2col";
+        diode-direction = "col2row";
 
-        col-gpios
-            = <&pro_micro_d 4 GPIO_ACTIVE_HIGH>
-            ;
+        col-gpios = <&pro_micro_d 4 GPIO_ACTIVE_HIGH>;
+        row-gpios = <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };
 
-        row-gpios
-            = <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+    azoteq0: azoteq0 {
+        compatible = "zmk,azoteq-trackpad";
+        irq-gpios = <&pro_micro_d 7 GPIO_ACTIVE_HIGH>;
+        reset-gpios = <&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
+        i2c = <&i2c0>;
     };
 };
