@@ -9,9 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # Add your custom azoteq driver module here
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
-      revision: main
+      # branch
+      revision: osos-driver
   self:
     path: config
