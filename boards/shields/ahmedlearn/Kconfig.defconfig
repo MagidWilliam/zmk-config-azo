@@ -4,7 +4,7 @@ if SHIELD_AHMEDLEARN
 config ZMK_KEYBOARD_NAME
     default "ahmedlearn"
 
-config AZOTEQ_IQS5XX
+config IQS5XX
     bool
     default y
 
