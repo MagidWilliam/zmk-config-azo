@@ -4,7 +4,6 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,mouse = &iqs5xx0;
     };
 
     keymap {
