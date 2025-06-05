@@ -27,10 +27,6 @@
     };
 };
 
-&gpio0 {
-    status = "okay";
-};
-
 &i2c0 {
     status = "okay";
 
@@ -38,6 +34,6 @@
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
         status = "okay";
-        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        dr-gpios = <&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
     };
 };
