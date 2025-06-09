@@ -27,17 +27,19 @@
     };
 };
 
-&gpio1 {
-    status = "okay";
-};
-
 &i2c0 {
-    status = "okay";
+	compatible = "nordic,nrf-twi";
+	sda-pin = <17>;
+	scl-pin = <20>;
 
-    iqs5xx: iqs5xx@74 {
+	status = "okay";
+
+	trackpad: trackpad@74 {
         compatible = "azoteq,iqs5xx";
-        reg = <0x74>;
+        label = "AZOTEQ_IQS5XX";
         status = "okay";
+        reg = <0x74>;
         dr-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+	    };
     };
 };
