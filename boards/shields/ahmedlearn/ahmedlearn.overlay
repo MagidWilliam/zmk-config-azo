@@ -1,8 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "ahmedlearn.dtsi"
 
-
 / {
+    aliases {
+        trackpad = &trackpad;
+    };
+
     physical_layout0 {
         kscan = <&kscan0>;
         transform = <&transform0>;
@@ -28,15 +31,14 @@
 };
 
 &i2c0 {
-	compatible = "nordic,nrf-twi";
+    compatible = "nordic,nrf-twi";
+    status = "okay";
 
-	status = "okay";
-
-	trackpad: trackpad@74 {
+    trackpad: trackpad@74 {
         compatible = "azoteq,iqs5xx";
         label = "AZOTEQ_IQS5XX";
         status = "okay";
         reg = <0x74>;
         dr-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
-	    };
     };
+};
