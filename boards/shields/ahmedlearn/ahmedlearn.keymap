@@ -4,7 +4,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,mouse = &trackpad;
+        // zmk,mouse = &trackpad;
     };
 
     keymap {

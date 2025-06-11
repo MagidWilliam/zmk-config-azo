@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch
-      revision: osos-driver
+      revision: claude-changes
   self:
     path: config

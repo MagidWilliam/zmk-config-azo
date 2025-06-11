@@ -15,7 +15,7 @@
         compatible = "zmk,matrix-transform";
         columns = <1>;
         rows = <2>;
-        map = <
+        map =
             RC(0,0) RC(0,1)
         >;
     };
@@ -40,5 +40,11 @@
         status = "okay";
         reg = <0x74>;
         dr-gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+
+        // input listener for trackpad input (important)
+        trackpad_input: input {
+            compatible = "zmk,input-listener";
+            device = <&trackpad>;
+        };
     };
 };
