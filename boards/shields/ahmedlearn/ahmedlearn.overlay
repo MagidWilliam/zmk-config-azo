@@ -38,7 +38,7 @@
         status = "okay";
 
         // FIXED: Use pro_micro reference instead of gpio1
-        dr-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>;
+        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
 
         // Optional properties (add these to your binding if needed)
         // invert-x;
