@@ -36,11 +36,21 @@
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
         status = "okay";
-        dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
-     };
 
+        // FIXED: Use pro_micro reference instead of gpio1
+        dr-gpios = <&pro_micro 5 GPIO_ACTIVE_HIGH>;
+
+        // Optional properties (add these to your binding if needed)
+        // invert-x;
+        // invert-y;
+    };
+};
+
+// Add the input listener OUTSIDE the I2C bus definition
+/ {
     trackpad_input_listener: trackpad_input_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
+        status = "okay";
     };
 };
