@@ -14,6 +14,7 @@
         default_layer {
             bindings = <
                &bt BT_CLR &bt BT_NXT
+               &kp I &kp P
             >;
         };
     };
