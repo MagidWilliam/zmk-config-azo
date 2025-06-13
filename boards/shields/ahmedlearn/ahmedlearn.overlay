@@ -48,7 +48,7 @@
         status = "okay";
 
         // Data ready pin - using GPIO0.8 (Pro Micro pin 9)
-        dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        dr-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH)>;
 
         // Optional configuration properties
         // invert-x;           // Uncomment if X-axis needs inversion
