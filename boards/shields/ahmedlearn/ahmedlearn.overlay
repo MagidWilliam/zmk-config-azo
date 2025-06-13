@@ -13,7 +13,7 @@
 
     transform0: transform0 {
         compatible = "zmk,matrix-transform";
-        columns = <2>;  // FIXED: Should match actual columns
+        columns = <2>;
         rows = <2>;
         map = <
             RC(0,0) RC(0,1)
@@ -39,6 +39,11 @@
     };
 };
 
+// Enable GPIO controllers
+&gpio0 {
+    status = "okay";
+};
+
 &gpio1 {
     status = "okay";
 };
@@ -47,15 +52,16 @@
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
 
-  trackpad: trackpad@74 {
-      compatible = "azoteq,iqs5xx";
-      reg = <0x74>;
-      dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+    trackpad: trackpad@74 {
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+        dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        status = "okay";
 
-      // Optional enhancements
-      sensitivity = <200>;           // Higher sensitivity
-      refresh-rate-active = <3>;     // Faster response
-      // no-taps;                    // Uncomment to disable taps
-      // invert-x;                   // Uncomment if needed
-  };
+        // Optional enhancements
+        sensitivity = <200>;
+        refresh-rate-active = <3>;
+        // no-taps;
+        // invert-x;
+    };
 };
