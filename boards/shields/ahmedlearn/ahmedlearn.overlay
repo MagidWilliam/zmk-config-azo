@@ -13,7 +13,7 @@
 
     transform0: transform0 {
         compatible = "zmk,matrix-transform";
-        columns = <1>;
+        columns = <2>;  // FIXED: Should match actual columns
         rows = <2>;
         map = <
             RC(0,0) RC(0,1)
@@ -25,10 +25,17 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
-        col-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Column 0
-                  , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Column 1
-        row-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                  , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        col-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Column 0
+                  , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;   // Column 1
+        row-gpios = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 0
+                  , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Row 1
+    };
+
+    // Input listener for trackpad events
+    trackpad_input_listener: trackpad_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackpad>;
+        status = "okay";
     };
 };
 
@@ -40,20 +47,13 @@
         reg = <0x74>;
         status = "okay";
 
-        // FIXED: Use pro_micro reference instead of gpio1
-        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        // Data ready pin - using GPIO0.8 (Pro Micro pin 9)
+        dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
 
-        // Optional properties (add these to your binding if needed)
-        // invert-x;
-        // invert-y;
-    };
-};
-
-// Add the input listener OUTSIDE the I2C bus definition
-/ {
-    trackpad_input_listener: trackpad_input_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackpad>;
-        status = "okay";
+        // Optional configuration properties
+        // invert-x;           // Uncomment if X-axis needs inversion
+        // invert-y;           // Uncomment if Y-axis needs inversion
+        // no-taps;            // Uncomment to disable tap detection
+        // sensitivity = <200>; // Higher = more sensitive (default: 128)
     };
 };
