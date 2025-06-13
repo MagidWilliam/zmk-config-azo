@@ -42,9 +42,15 @@
 &i2c0 {
     status = "okay";
 
-    trackpad: trackpad@74 {
-        compatible = "azoteq,iqs5xx";
-        reg = <0x74>;
-        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
-    };
+  trackpad: trackpad@74 {
+      compatible = "azoteq,iqs5xx";
+      reg = <0x74>;
+      dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+
+      // Optional enhancements
+      sensitivity = <200>;           // Higher sensitivity
+      refresh-rate-active = <3>;     // Faster response
+      // no-taps;                    // Uncomment to disable taps
+      // invert-x;                   // Uncomment if needed
+  };
 };
