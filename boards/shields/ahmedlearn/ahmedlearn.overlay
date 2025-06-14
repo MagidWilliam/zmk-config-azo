@@ -31,6 +31,37 @@
                   , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Row 1
     };
 
+    // Optional: Define custom macros for trackpad gestures
+    macros {
+        trackpad_f3: trackpad_f3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F3>;
+            label = "TRACKPAD_F3";
+        };
+
+        trackpad_f4: trackpad_f4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F4>;
+            label = "TRACKPAD_F4";
+        };
+
+        trackpad_zoom_in: trackpad_zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(EQUAL)>;
+            label = "TRACKPAD_ZOOM_IN";
+        };
+
+        trackpad_zoom_out: trackpad_zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(MINUS)>;
+            label = "TRACKPAD_ZOOM_OUT";
+        };
+    };
+
     // Input listener for trackpad events
     trackpad_input_listener: trackpad_input_listener {
         compatible = "zmk,input-listener";
