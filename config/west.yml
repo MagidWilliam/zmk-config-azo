@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch
-      revision: fix-drag&drop-issue
+      revision: new-arch
   self:
     path: config
