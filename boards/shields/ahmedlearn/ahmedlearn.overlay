@@ -36,6 +36,12 @@
         compatible = "zmk,input-listener";
         device = <&trackpad>;
         status = "okay";
+
+        // Map gesture mouse buttons to key positions in matrix
+        // This maps special mouse buttons to virtual key positions
+        // that can be handled in the keymap
+        xy-swap;
+        // input-processors = <&trackpad_gesture_processor>;
     };
 };
 
