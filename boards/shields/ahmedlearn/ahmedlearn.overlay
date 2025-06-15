@@ -1,7 +1,5 @@
-// Updated device tree overlay for ZMK compatibility
+// Fixed device tree overlay - avoiding RC macro conflict
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include "ahmedlearn.dtsi"
 
 / {
@@ -19,8 +17,8 @@
         columns = <2>;
         rows = <2>;
         map = <
-            RC(0,0) RC(0,1)
-            RC(1,0) RC(1,1)
+            0 1
+            2 3
         >;
     };
 
