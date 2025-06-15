@@ -31,17 +31,10 @@
                   , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Row 1
     };
 
-    // Input listener for trackpad events
     trackpad_input_listener: trackpad_input_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
         status = "okay";
-
-        // Map gesture mouse buttons to key positions in matrix
-        // This maps special mouse buttons to virtual key positions
-        // that can be handled in the keymap
-        xy-swap;
-        // input-processors = <&trackpad_gesture_processor>;
     };
 };
 
