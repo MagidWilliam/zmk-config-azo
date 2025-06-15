@@ -1,4 +1,7 @@
+// Updated device tree overlay for ZMK compatibility
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 #include "ahmedlearn.dtsi"
 
 / {
@@ -31,9 +34,14 @@
                   , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  // Row 1
     };
 
+    // Input listener for mouse events only (no keyboard events)
     trackpad_input_listener: trackpad_input_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
+
+        // Mouse movement and click events go through input system
+        // Gesture-based keyboard events (F3/F4) go through ZMK event system
+
         status = "okay";
     };
 };
@@ -57,10 +65,13 @@
         dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
         status = "okay";
 
-        // Optional enhancements
+        // Enhanced configuration for better gesture detection
         sensitivity = <200>;
-        refresh-rate-active = <3>;
-        // no-taps;
-        // invert-x;
+        refresh-rate-active = <5>;   // Faster refresh for better gesture detection
+        refresh-rate-idle = <20>;
+
+        // Enable taps and gestures for proper detection
+        // Keyboard events (F3/F4) are handled by ZMK event system
+        // Mouse events (clicks, movement) are handled by input system
     };
 };
