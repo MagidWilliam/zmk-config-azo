@@ -16,12 +16,12 @@
                &kp I &kp P
             >;
 
-            // Add sensor bindings for trackpad gestures
+            // Add sensor bindings for trackpad gestures (direct approach)
             sensor-bindings = <
-                &kp F3          // INPUT_BTN_SIDE -> F3 key (3-finger swipe up)
-                &kp F4          // INPUT_BTN_EXTRA -> F4 key (3-finger swipe down)
-                &kp LC(EQUAL)   // INPUT_BTN_FORWARD -> Ctrl+Plus (zoom in)
-                &kp LC(MINUS)   // INPUT_BTN_BACK -> Ctrl+Minus (zoom out)
+                &kp F3              // INPUT_BTN_SIDE -> F3 key (3-finger swipe up)
+                &kp F4              // INPUT_BTN_EXTRA -> F4 key (3-finger swipe down)
+                &kp LS(EQUAL)       // INPUT_BTN_FORWARD -> Shift+Equal (Plus for zoom in)
+                &kp MINUS           // INPUT_BTN_BACK -> Minus (for zoom out)
             >;
         };
     };
