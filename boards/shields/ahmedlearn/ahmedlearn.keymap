@@ -12,8 +12,8 @@
 
         default_layer {
             bindings = <
-               &bt BT_CLR &bt BT_NXT &kp F3      &kp F4         // Row 0: Physical keys + Virtual F3/F4
-               &kp I      &kp P      &kp LC(EQUAL) &kp LC(MINUS) // Row 1: Physical keys + Virtual zoom
+               &bt BT_CLR &bt BT_NXT
+               &kp I &kp P
             >;
         };
     };
