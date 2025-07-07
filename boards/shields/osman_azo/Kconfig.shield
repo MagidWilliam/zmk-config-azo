@@ -1,0 +1,2 @@
+config SHIELD_osman_azo
+    def_bool $(shields_list_contains, osman_azo)

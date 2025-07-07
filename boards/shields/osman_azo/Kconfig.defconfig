@@ -1,8 +1,8 @@
-if SHIELD_AHMEDLEARN
+if SHIELD_osman_azo
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "ahmedlearn"
+    default "osman_azo"
 
 config IQS5XX
     bool

@@ -20,5 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ahmedlearn
-    snippet: zmk-usb-logging
+    shield: osman_azo_left
+  - board: nice_nano_v2
+    shield: osman_azo_right
+  - board: nice_nano_v2
+    shield: settings_reset

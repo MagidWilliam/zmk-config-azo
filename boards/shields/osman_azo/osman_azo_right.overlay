@@ -1,0 +1,78 @@
+#include "osman_azo.dtsi"
+
+/ {
+    aliases {
+        trackpad = &trackpad;
+    };
+
+    // Input listener
+    trackpad_input_listener: trackpad_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackpad>;
+        status = "okay";
+    };
+};
+
+&default_transform {
+    col-offset = <8>;
+};
+
+&kscan0 {
+    diode-direction = "col2row";
+    col-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    row-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+              , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+};
+
+&i2c0 {
+    status = "okay";
+    clock-frequency = <400000>;
+
+    touchpad: iqs5xx_manus@74 {
+        compatible = "azoteq,iqs-manus";
+        reg = <0x74>;
+        irq-gpios = <&pro_micro_d 2 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+        // Optional orientation properties:
+        // flip-x;
+        // flip-y;
+        // switch-xy;
+    };
+};
+
+
+// Enable GPIO controllers
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
+
+&i2c0 {
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_FAST>;
+
+    trackpad: trackpad@74 {
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+        dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+
+        // Enhanced configuration for better gesture detection
+        sensitivity = <200>;
+        refresh-rate-active = <5>;   // Faster refresh
+        refresh-rate-idle = <20>;
+    };
+};
