@@ -1,8 +1,10 @@
-if SHIELD_osman_azo
+if SHIELD_osman_azo_RIGHT
 
-# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "osman_azo"
+    default "osman_azo_R"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+     default y
 
 config IQS5XX
     bool
@@ -14,5 +16,18 @@ config ZMK_POINTING
 
 config INPUT
     default y
+endif
+
+if SHIELD_osman_azo_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "osman_azo_L"
+
+endif
+
+if SHIELD_osman_azo_RIGHT || SHIELD_osman_azo_LEFT
+
+config ZMK_SPLIT
+     default y
 
 endif
