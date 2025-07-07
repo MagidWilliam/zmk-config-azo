@@ -23,6 +23,9 @@ if SHIELD_osman_azo_LEFT
 config ZMK_KEYBOARD_NAME
     default "osman_azo_L"
 
+config ZMK_SPLIT_BLE_ROLE_PERIPHERAL
+     default y
+
 endif
 
 if SHIELD_osman_azo_RIGHT || SHIELD_osman_azo_LEFT
