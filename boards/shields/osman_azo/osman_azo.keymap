@@ -23,9 +23,6 @@
             // Encoder bindings for default layer
             // Assuming encoder is on the left half and controls volume
             // Adjust these as needed based on your physical encoder placement and desired functionality
-            encoder_1: encoder_1 {
-                keymap = <&kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE>;
-            };
         };
 
         raise {
