@@ -24,9 +24,9 @@
     status = "okay";
 };
 
-
 / {
     encoders {
+        compatible = "zmk,encoders";
         encoder_1: encoder_1 {
             compatible = "zmk,encoder-gpio";
             label = "ENCODER_1";

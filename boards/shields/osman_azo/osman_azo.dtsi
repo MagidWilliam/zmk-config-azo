@@ -25,14 +25,4 @@
         label = "KSCAN";
         diode-direction = "col2row";
     };
-
-    // This is the correct placement for the encoders node
-    encoders {
-        compatible = "zmk,encoders";
-        encoder_1: encoder_1 {
-            label = "ENCODER_1";
-            status = "okay";
-            gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>, <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        };
-    };
 };
