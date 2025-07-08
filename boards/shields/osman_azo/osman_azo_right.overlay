@@ -33,23 +33,6 @@
               , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
-&i2c0 {
-    status = "okay";
-    clock-frequency = <400000>;
-
-    touchpad: iqs5xx_manus@74 {
-        compatible = "azoteq,iqs-manus";
-        reg = <0x74>;
-        irq-gpios = <&pro_micro_d 2 GPIO_ACTIVE_HIGH>;
-        status = "okay";
-        // Optional orientation properties:
-        // flip-x;
-        // flip-y;
-        // switch-xy;
-    };
-};
-
-
 // Enable GPIO controllers
 &gpio0 {
     status = "okay";
