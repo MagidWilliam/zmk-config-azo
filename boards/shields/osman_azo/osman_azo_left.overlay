@@ -34,8 +34,9 @@
             status = "okay";
         };
     };
+};
 
-    &i2c0 {
+ &i2c0 {
         status = "disabled";
         clock-frequency = <I2C_BITRATE_FAST>;
 
@@ -49,5 +50,5 @@
             sensitivity = <200>;
             refresh-rate-active = <5>;   // Faster refresh
             refresh-rate-idle = <20>;
-        };
+            };
 };
