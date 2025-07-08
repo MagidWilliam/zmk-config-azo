@@ -1,8 +1,5 @@
 #include "osman_azo.dtsi"
 
-&default_transform {
-    col-offset = <0>;
-};
 &kscan0 {
     col-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
               , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -25,21 +22,4 @@
 
 &gpio1 {
     status = "okay";
-};
-
-/ {
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        resolution = <4>;
-        steps = <40>;
-        a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        status = "okay";
-    };
-
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-    };
 };
