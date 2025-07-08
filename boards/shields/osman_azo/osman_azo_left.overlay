@@ -23,3 +23,15 @@
 &gpio1 {
     status = "okay";
 };
+
+
+/ {
+    encoders {
+        encoder_1: encoder_1 {
+            compatible = "zmk,encoder-gpio";
+            label = "ENCODER_1";
+            gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>, <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            status = "okay";
+        };
+    };
+};

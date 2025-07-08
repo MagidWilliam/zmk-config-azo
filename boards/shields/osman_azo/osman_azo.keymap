@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define RAISE   1
@@ -11,37 +12,23 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// Commented layout is not actual layout.
-// -------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  BSPC   |
-// |   TAB   |    Q    |    W    |    E    |    R    |    T    |                   |    Y    |    U    |    I    |    O    |    P    |    \    |
-// |  LALT   |    A    |    S    |    D    |    F    |    G    |                   |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  LCTRL  |    Z    |    X    |    C    |    V    |    B    |                   |    N    |    M    |    ,    |    .    |    /    |  RALT   |
-//                     |    [    |    ]    |                                                           |    -    |    =    |
-//                               | MO lay 1| SPACE   |                   | ENTER   | MO lay 2|
-//                                         |   TAB   |   HOME  |   END   |   DEL   |
-//                                         |  Raise  |    ~    |   GUI   |  Lower  |
             bindings = <
 &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                        &kp N6     &bt BT_CLR &kp N8     &kp N9     &kp N0     &kp BSPC
 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                                         &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
 &kp LALT   &kp A      &bt BT_CLR &kp D      &kp F      &kp G        &kp HOME   &kp LSHIFT &kp DEL    &kp H      &kp J      &kp K      &kp L      &kp DOT    &kp SQT
 &kp LCTRL  &kp Z      &kp X      &kp C      &kp V      &kp B        &kp BSPC   &kp PG_UP  &kp PG_DN  &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RALT
 &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp END    &bt BT_CLR   &kp PG_DN  &mo RAISE  &mo LOWER  &kp PG_DN  &kp MINUS  &kp EQUAL  &kp ENTER  &kp PIPE   &trans
-
             >;
+
+            // Encoder bindings for default layer
+            // Assuming encoder is on the left half and controls volume
+            // Adjust these as needed based on your physical encoder placement and desired functionality
+            encoder_1: encoder_1 {
+                keymap = <&kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE>;
+            };
         };
 
         raise {
-// commented layout is not actual layout.
-// -------------------------------------------------------------------------------------------------------------------------
-// |   esc   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  bspc   |
-// |   tab   |    q    |    w    |    e    |    r    |    t    |                   |    y    |    u    |    i    |    o    |    p    |    \    |
-// |  lalt   |    a    |    s    |    d    |    f    |    g    |                   |    h    |    j    |    k    |    l    |    ;    |    '    |
-// |  lctrl  |    z    |    x    |    c    |    v    |    b    |                   |    n    |    m    |    ,    |    .    |    /    |  ralt   |
-//                     |    [    |    ]    |                                                           |    -    |    =    |
-//                               | mo lay 1| space   |                   | enter   | mo lay 2|
-//                                         |   tab   |   home  |   end   |   del   |
-//                                         |  raise  |    ~    |   gui   |  lower  |
             bindings = <
 &bt BT_SEL 0 &kp F1     &kp F2    &kp F3     &kp F4     &kp F5                                     &kp F6        &kp F7     &kp F8     &kp F9     &kp F10        &kp F11
 &bt BT_NXT   &trans     &trans    &trans     &trans     &kp LBKT                                   &kp RBKT      &kp N7     &kp N8     &kp N9     &trans         &kp F12
@@ -52,16 +39,6 @@
         };
 
         lower {
-// commented layout is not actual layout.
-// -------------------------------------------------------------------------------------------------------------------------
-// |   esc   |    1    |    2    |    3    |    4    |    5    |                   |    6    |    7    |    8    |    9    |    0    |  bspc   |
-// |   tab   |    q    |    w    |    e    |    r    |    t    |                   |    y    |    u    |    i    |    o    |    p    |    \    |
-// |  lalt   |    a    |    s    |    d    |    f    |    g    |                   |    h    |    j    |    k    |    l    |    ;    |    '    |
-// |  lctrl  |    z    |    x    |    c    |    v    |    b    |                   |    n    |    m    |    ,    |    .    |    /    |  ralt   |
-//                     |    [    |    ]    |                                                           |    -    |    =    |
-//                               | mo lay 1| space   |                   | enter   | mo lay 2|
-//                                         |   tab   |   home  |   end   |   del   |
-//                                         |  raise  |    ~    |   gui   |  lower  |
             bindings = <
 &kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
 &trans     &trans     &kp K_PREV &kp K_PP   &kp K_NEXT &kp C_VOL_UP                               &kp K_CALC &kp KP_NUM &kp INS    &kp SLCK   &trans      &kp F12
@@ -70,5 +47,7 @@
 &trans     &trans     &trans     &trans     &trans     &trans       &trans     &trans    &trans   &trans     &trans     &trans     &trans     &trans      &trans
             >;
         };
-   };
+    };
 };
+
+
