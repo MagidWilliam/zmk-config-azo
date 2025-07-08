@@ -33,8 +33,6 @@
             label = "ENCODER_1";
             status = "okay";
             gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>, <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            zephyr,code-for-increment = <&kp C_VOL_UP>;
-            zephyr,code-for-decrement = <&kp C_VOL_DN>;
         };
     };
 };
