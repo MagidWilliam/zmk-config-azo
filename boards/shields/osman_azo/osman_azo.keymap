@@ -19,10 +19,7 @@
 &kp LCTRL  &kp Z      &kp X      &kp C      &kp V      &kp B        &kp SPACE  &kp PG_UP  &kp PG_DN  &kp N      &kp M      &kp COMMA  &kp PERIOD &kp FSLH   &kp RALT
 &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp END    &kp CAPS     &kp INS    &mo RAISE  &mo LOWER  &kp RSHIFT &kp MINUS  &kp EQUAL  &kp ENTER  &kp PIPE   &kp RCTRL
             >;
-
-            // Encoder bindings for default layer
-            // Assuming encoder is on the left half and controls volume
-            // Adjust these as needed based on your physical encoder placement and desired functionality
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         raise {
