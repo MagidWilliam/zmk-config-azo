@@ -51,7 +51,7 @@
         reg = <0x74>;
         dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
         status = "okay";
-        // rotate-90;
+        rotate-90;
         // Enhanced configuration for better gesture detection
         // sensitivity = <200>;
         refresh-rate-active = <5>;   // Faster refresh
