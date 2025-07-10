@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch:
-      revision: fix-double-wait
+      revision: main
   self:
     path: config
