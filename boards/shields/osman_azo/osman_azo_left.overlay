@@ -26,19 +26,11 @@
     status = "okay";
 };
 
-/ {
-    encoders {
-        compatible = "zmk,encoders";
-        encoder_1: encoder_1 {
-            compatible = "zmk,encoder-gpio";
-            label = "ENCODER_1";
-            gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>, <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            status = "okay";
-        };
-    };
-};
-
 &i2c0 {
     status = "okay";
     clock-frequency = <400000>;
+};
+
+&left_encoder {
+    status = "okay";
 };
