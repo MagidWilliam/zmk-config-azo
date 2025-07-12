@@ -1,0 +1,219 @@
+layout:
+  split: true
+  columns: 16
+  rows: 5
+  matrix_pins:
+    cols: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    rows: [0, 1, 2, 3, 4]
+
+layers:
+  default:
+    - {t: 'ESC', s: '$$mdi:keyboard-esc$$'}
+    - {t: '1', s: '!'}
+    - {t: '2', s: '@'}
+    - {t: '3', s: '#'}
+    - {t: '4', s: '$'}
+    - {t: '5', s: '%'}
+    - {t: '6', s: '^'}
+    - {t: '7', s: '&'}
+    - {t: '8', s: '*'}
+    - {t: '9', s: '('}
+    - {t: '0', s: ')'}
+    - {t: 'BSPC', s: '$$mdi:backspace$$'}
+    - {t: 'TAB', s: '$$mdi:keyboard-tab$$'}
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: '\', s: '|'}
+    - {t: 'ALT', s: '$$mdi:apple-keyboard-option$$'}
+    - A
+    - S
+    - D
+    - F
+    - G
+    - {t: 'HOME', s: '$$mdi:home$$'}
+    - {t: 'CMD+X', s: '$$mdi:content-cut$$'}
+    - {t: 'DEL', s: '$$mdi:backspace-reverse-outline$$'}
+    - {t: 'DEL', s: '$$mdi:backspace-reverse-outline$$'}
+    - H
+    - J
+    - K
+    - L
+    - {t: ';', s: ':'}
+    - {t: '''', s: '"'}
+    - {t: 'CTRL', s: '$$mdi:apple-keyboard-control$$'}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - {t: 'SPC', s: '$$mdi:keyboard-space$$'}
+    - {t: 'CMD+C', s: '$$mdi:content-copy$$'}
+    - {t: 'BT CLR', s: '$$mdi:bluetooth-off$$'}
+    - {t: 'CAPS', s: '$$mdi:apple-keyboard-caps$$'}
+    - N
+    - M
+    - {t: ',', s: '<'}
+    - {t: '.', s: '>'}
+    - {t: '/', s: '?'}
+    - {t: 'ALT', s: '$$mdi:apple-keyboard-option$$'}
+    - {t: 'LEFT', s: '$$mdi:arrow-left-bold$$'}
+    - {t: 'CMD+X', s: '$$mdi:content-cut$$'}
+    - {t: 'UP', s: '$$mdi:arrow-up-bold$$'}
+    - {t: 'GRAVE', s: '`'}
+    - {t: 'END', s: '$$mdi:keyboard-end$$'}
+    - {t: 'CMD+V', s: '$$mdi:content-paste$$'}
+    - {t: 'BSPC', s: '$$mdi:backspace$$'}
+    - {t: 'RAISE', s: '$$mdi:arrow-up-circle$$'}
+    - {t: 'LEFT', s: '$$mdi:arrow-left-bold$$'}
+    - {t: 'DOWN', s: '$$mdi:arrow-down-bold$$'}
+    - {t: 'UP', s: '$$mdi:arrow-up-bold$$'}
+    - {t: 'RIGHT', s: '$$mdi:arrow-right-bold$$'}
+
+  raise:
+    - {t: 'BT 0', s: '$$mdi:bluetooth-connect$$'}
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+    - {t: 'BT NXT', s: '$$mdi:bluetooth-connect$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: '[', s: '{'}
+    - {t: ']', s: '}'}
+    - {t: '7', s: '&'}
+    - {t: '8', s: '*'}
+    - {t: '9', s: '('}
+    - {t: 'TRANS', type: trans}
+    - F12
+    - {t: 'BT PRV', s: '$$mdi:bluetooth-connect$$'}
+    - {t: 'HOME', s: '$$mdi:home$$'}
+    - {t: 'PG UP', s: '$$mdi:page-first$$'}
+    - {t: 'PG DN', s: '$$mdi:page-last$$'}
+    - {t: 'END', s: '$$mdi:keyboard-end$$'}
+    - {t: '(', s: '$$mdi:format-parentheses$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: ')', s: '$$mdi:format-parentheses$$'}
+    - {t: '4', s: '$'}
+    - {t: '5', s: '%'}
+    - {t: '6', s: '^'}
+    - {t: '-', s: '_'}
+    - {t: '|', s: '$$mdi:format-vertical-align-center$$'}
+    - {t: 'BT CLR', s: '$$mdi:bluetooth-off$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'X', s: '$$mdi:close$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'RESET', s: '$$mdi:backup-restore$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'BOOTLDR', s: '$$mdi:progress-download$$'}
+    - {t: 'RESET', s: '$$mdi:backup-restore$$'}
+    - {t: '1', s: '!'}
+    - {t: '2', s: '@'}
+    - {t: '3', s: '#'}
+    - {t: '/', s: '?'}
+    - {t: '_', s: '$$mdi:format-underline$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'PSCRN', s: '$$mdi:printer-outline$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'ENTER', s: '$$mdi:keyboard-return$$'}
+    - {t: '|', s: '$$mdi:format-vertical-align-center$$'}
+    - {t: 'CTRL', s: '$$mdi:apple-keyboard-control$$'}
+
+  lower:
+    - {t: 'GRAVE', s: '`'}
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'PREV', s: '$$mdi:skip-previous$$'}
+    - {t: 'PP', s: '$$mdi:play-pause$$'}
+    - {t: 'NEXT', s: '$$mdi:skip-next$$'}
+    - {t: 'VOL+', s: '$$mdi:volume-high$$'}
+    - {t: 'CALC', s: '$$mdi:calculator$$'}
+    - {t: 'NUM', s: '$$mdi:numeric$$'}
+    - {t: 'INS', s: '$$mdi:keyboard-return$$'}
+    - {t: 'SLCK', s: '$$mdi:lock$$'}
+    - {t: 'TRANS', type: trans}
+    - F12
+    - {t: 'TRANS', type: trans}
+    - {t: 'LEFT', s: '$$mdi:arrow-left-bold$$'}
+    - {t: 'UP', s: '$$mdi:arrow-up-bold$$'}
+    - {t: 'DOWN', s: '$$mdi:arrow-down-bold$$'}
+    - {t: 'RIGHT', s: '$$mdi:arrow-right-bold$$'}
+    - {t: 'VOL-', s: '$$mdi:volume-low$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - H
+    - J
+    - K
+    - L
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'MUTE', s: '$$mdi:volume-off$$'}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
+    - {t: 'TRANS', type: trans}
