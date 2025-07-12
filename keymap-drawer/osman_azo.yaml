@@ -1,224 +1,25 @@
 layout:
-  split: true
-  columns: 16
-  rows: 5
-  matrix_pins:
-    cols: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-    rows: [0, 1, 2, 3, 4]
-  layout: [
-    [ 0,  1,  2,  3,  4,  5, -1, -1, -1, -1,  6,  7,  8,  9, 10, 11],
-    [12, 13, 14, 15, 16, 17, -1, -1, -1, -1, 18, 19, 20, 21, 22, 23],
-    [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
-    [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55],
-    [-1, 56, 57, 58, 59, -1, 60, 61, 62, 63, -1, 64, 65, 66, 67, -1]
-  ]
+  qmk_info_json: boards/shields/osman_azo/osman_azo.json
+  layout_name: default_layout
 
 layers:
   default:
-    - {t: 'ESC'}
-    - {t: '1'}
-    - {t: '2'}
-    - {t: '3'}
-    - {t: '4'}
-    - {t: '5'}
-    - {t: '6'}
-    - {t: '7'}
-    - {t: '8'}
-    - {t: '9'}
-    - {t: '0'}
-    - {t: 'BSPC'}
-    - {t: 'TAB'}
-    - Q
-    - W
-    - E
-    - R
-    - T
-    - Y
-    - U
-    - I
-    - O
-    - P
-    - {t: '\'}
-    - {t: 'ALT'}
-    - A
-    - S
-    - D
-    - F
-    - G
-    - {t: 'HOME'}
-    - {t: 'CMD+X'}
-    - {t: 'DEL'}
-    - {t: 'DEL'}
-    - H
-    - J
-    - K
-    - L
-    - {t: ';'}
-    - {t: ''''}
-    - {t: 'CTRL'}
-    - Z
-    - X
-    - C
-    - V
-    - B
-    - {t: 'SPC'}
-    - {t: 'CMD+C'}
-    - {t: 'BT CLR'}
-    - {t: 'CAPS'}
-    - N
-    - M
-    - {t: ','}
-    - {t: '.'}
-    - {t: '/'}
-    - {t: 'ALT'}
-    - {t: 'LEFT'}
-    - {t: 'CMD+X'}
-    - {t: 'UP'}
-    - {t: 'GRAVE'}
-    - {t: 'END'}
-    - {t: 'CMD+V'}
-    - {t: 'BSPC'}
-    - {t: 'RAISE'}
-    - {t: 'LEFT'}
-    - {t: 'DOWN'}
-    - {t: 'UP'}
-    - {t: 'RIGHT'}
+    - [{t: 'ESC'}, {t: '1'}, {t: '2'}, {t: '3'}, {t: '4'}, {t: '5'}, {t: '6'}, {t: '7'}, {t: '8'}, {t: '9'}, {t: '0'}, {t: 'BSPC'}]
+    - [{t: 'TAB'}, Q, W, E, R, T, Y, U, I, O, P, {t: '\'}]
+    - [{t: 'ALT'}, A, S, D, F, G, {t: 'HOME'}, {t: 'CMD+X'}, {t: 'DEL'}, {t: 'DEL'}, H, J, K, L, {t: ';'}, {t: ''''}]
+    - [{t: 'CTRL'}, Z, X, C, V, B, {t: 'SPC'}, {t: 'CMD+C'}, {t: 'BT CLR'}, {t: 'CAPS'}, N, M, {t: ','}, {t: '.'}, {t: '/'}, {t: 'ALT'}]
+    - [{t: 'LEFT'}, {t: 'CMD+X'}, {t: 'UP'}, {t: 'GRAVE'}, {t: 'END'}, {t: 'CMD+V'}, {t: 'BSPC'}, {t: 'RAISE'}, {t: 'LEFT'}, {t: 'DOWN'}, {t: 'UP'}, {t: 'RIGHT'}]
 
   raise:
-    - {t: 'BT 0'}
-    - {t: 'F1'}
-    - {t: 'F2'}
-    - {t: 'F3'}
-    - {t: 'F4'}
-    - {t: 'F5'}
-    - {t: 'F6'}
-    - {t: 'F7'}
-    - {t: 'F8'}
-    - {t: 'F9'}
-    - {t: 'F10'}
-    - {t: 'F11'}
-    - {t: 'BT NXT'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: '['}
-    - {t: ']'}
-    - {t: '7'}
-    - {t: '8'}
-    - {t: '9'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'F12'}
-    - {t: 'BT PRV'}
-    - {t: 'HOME'}
-    - {t: 'PG UP'}
-    - {t: 'PG DN'}
-    - {t: 'END'}
-    - {t: '('}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: ')'}
-    - {t: '4'}
-    - {t: '5'}
-    - {t: '6'}
-    - {t: '-'}
-    - {t: '|'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'BT CLR'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'RESET'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'BOOTLDR'}
-    - {t: 'RESET'}
-    - {t: '1'}
-    - {t: '2'}
-    - {t: '3'}
-    - {t: '/'}
-    - {t: '_'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'PSCRN'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'ENTER'}
-    - {t: '|'}
-    - {t: 'CTRL'}
-    - {t: 'TRANS', type: trans}
+    - [{t: 'BT 0'}, {t: 'F1'}, {t: 'F2'}, {t: 'F3'}, {t: 'F4'}, {t: 'F5'}, {t: 'F6'}, {t: 'F7'}, {t: 'F8'}, {t: 'F9'}, {t: 'F10'}, {t: 'F11'}]
+    - [{t: 'BT NXT'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: '['}, {t: ']'}, {t: '7'}, {t: '8'}, {t: '9'}, {t: 'TRANS', type: trans}, {t: 'F12'}]
+    - [{t: 'BT PRV'}, {t: 'HOME'}, {t: 'PG UP'}, {t: 'PG DN'}, {t: 'END'}, {t: '('}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: ')'}, {t: '4'}, {t: '5'}, {t: '6'}, {t: '-'}, {t: '|'}, {t: 'TRANS', type: trans}]
+    - [{t: 'BT CLR'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'RESET'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'BOOTLDR'}, {t: 'RESET'}, {t: '1'}, {t: '2'}, {t: '3'}, {t: '/'}, {t: '_'}, {t: 'TRANS', type: trans}]
+    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'PSCRN'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'ENTER'}, {t: '|'}, {t: 'CTRL'}, {t: 'TRANS', type: trans}]
 
   lower:
-    - {t: 'GRAVE'}
-    - {t: 'F1'}
-    - {t: 'F2'}
-    - {t: 'F3'}
-    - {t: 'F4'}
-    - {t: 'F5'}
-    - {t: 'F6'}
-    - {t: 'F7'}
-    - {t: 'F8'}
-    - {t: 'F9'}
-    - {t: 'F10'}
-    - {t: 'F11'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'PREV'}
-    - {t: 'PP'}
-    - {t: 'NEXT'}
-    - {t: 'VOL+'}
-    - {t: 'CALC'}
-    - {t: 'NUM'}
-    - {t: 'INS'}
-    - {t: 'SLCK'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'F12'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'LEFT'}
-    - {t: 'UP'}
-    - {t: 'DOWN'}
-    - {t: 'RIGHT'}
-    - {t: 'VOL-'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - H
-    - J
-    - K
-    - L
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'MUTE'}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
-    - {t: 'TRANS', type: trans}
+    - [{t: 'GRAVE'}, {t: 'F1'}, {t: 'F2'}, {t: 'F3'}, {t: 'F4'}, {t: 'F5'}, {t: 'F6'}, {t: 'F7'}, {t: 'F8'}, {t: 'F9'}, {t: 'F10'}, {t: 'F11'}]
+    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'PREV'}, {t: 'PP'}, {t: 'NEXT'}, {t: 'VOL+'}, {t: 'CALC'}, {t: 'NUM'}, {t: 'INS'}, {t: 'SLCK'}, {t: 'TRANS', type: trans}, {t: 'F12'}]
+    - [{t: 'TRANS', type: trans}, {t: 'LEFT'}, {t: 'UP'}, {t: 'DOWN'}, {t: 'RIGHT'}, {t: 'VOL-'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, H, J, K, L, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
+    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'MUTE'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
+    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
