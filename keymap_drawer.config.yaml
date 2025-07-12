@@ -110,6 +110,19 @@ draw_config:
   use_local_cache: true
 
 parse_config:
+  # Add the physical layout specification
+  zmk_keyboard_name: osman_azo
+  layout_function: layout_function
+
+  # Specify the custom layout
+  layout:
+    split: true
+    columns: 16
+    rows: 5
+    matrix_pins:
+      cols: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+      rows: [0, 1, 2, 3, 4]
+
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
   trans_legend:
@@ -318,10 +331,10 @@ parse_config:
     SQT:
       tap: "'"
       shifted: '"'
-    APOSTROPHE: 
+    APOSTROPHE:
       tap: "'"
       shifted: '"'
-    APOS: 
+    APOS:
       tap: "'"
       shifted: '"'
     DOUBLE_QUOTES: '"'
@@ -424,8 +437,8 @@ parse_config:
       tap: 'PgDn'
       shifted: ''
     INSERT:
-       tap: 'Ins'
-       shifted: ''
+      tap: 'Ins'
+      shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
@@ -492,7 +505,7 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
     K_FIND: $$mdi:apple-finder$$
-    # Command + 
+    # Command +
     LG(A):
       tap: 'A'
       hold: $$mdi:apple-keyboard-command$$
