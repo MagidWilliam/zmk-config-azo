@@ -3,7 +3,128 @@ draw_config:
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 56.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  shrink_wide_legends: 6
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
+  footer_text: "Osman Azo - Split keyboard with trackpad and encoder"
+  dark_mode: false
 
 parse_config:
-  # Don't try to parse - we'll provide the layout manually
   skip_binding_parsing: false
+  sticky_label: "sticky"
+  toggle_label: "toggle"
+  tap_toggle_label: "tap-toggle"
+  trans_legend:
+    t: "▽"
+    type: "trans"
+  layer_legend_map:
+    "RAISE": "⇧"
+    "LOWER": "⇩"
+    "DEFAULT": "DEF"
+  modifier_fn_map:
+    left_ctrl: "Ctrl"
+    right_ctrl: "Ctrl"
+    left_shift: "Shift"
+    right_shift: "Shift"
+    left_alt: "Alt"
+    right_alt: "Alt"
+    left_gui: "Cmd"
+    right_gui: "Cmd"
+    keycode_combiner: "{mods}+{key}"
+    mod_combiner: "{mod_1}+{mod_2}"
+  raw_binding_map:
+    # Layer access
+    "&mo RAISE": {t: "RAISE", h: "MO", type: "held"}
+    "&mo LOWER": {t: "LOWER", h: "MO", type: "held"}
+    "&mo 1": {t: "RAISE", h: "MO", type: "held"}
+    "&mo 2": {t: "LOWER", h: "MO", type: "held"}
+    # Bluetooth controls
+    "&bt BT_CLR": "BT CLR"
+    "&bt BT_SEL 0": "BT 0"
+    "&bt BT_SEL 1": "BT 1"
+    "&bt BT_SEL 2": "BT 2"
+    "&bt BT_SEL 3": "BT 3"
+    "&bt BT_SEL 4": "BT 4"
+    # Output selection
+    "&out OUT_TOG": "OUT TOG"
+    "&out OUT_USB": "OUT USB"
+    "&out OUT_BLE": "OUT BLE"
+    # Volume controls for encoder
+    "&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN": "Vol ±"
+    # Arrow keys with symbols
+    "&kp UP": "↑"
+    "&kp DOWN": "↓"
+    "&kp LEFT": "←"
+    "&kp RIGHT": "→"
+    # Common Mac shortcuts
+    "&kp LG(X)": "⌘X"
+    "&kp LG(C)": "⌘C"
+    "&kp LG(V)": "⌘V"
+    "&kp LG(Z)": "⌘Z"
+    # Special keys
+    "&kp GRAVE": "`"
+    "&kp BSPC": "⌫"
+    "&kp DEL": "⌦"
+    "&kp TAB": "⇥"
+    "&kp ENTER": "⏎"
+    "&kp SPACE": "␣"
+    "&kp ESC": "⎋"
+    "&kp CAPS": "⇪"
+    "&kp HOME": "⇤"
+    "&kp END": "⇥"
+    # Modifiers
+    "&kp LALT": "⌥"
+    "&kp RALT": "⌥"
+    "&kp LCTRL": "⌃"
+    "&kp RCTRL": "⌃"
+    "&kp LSHIFT": "⇧"
+    "&kp RSHIFT": "⇧"
+    # Numbers and symbols
+    "&kp N1": "1"
+    "&kp N2": "2"
+    "&kp N3": "3"
+    "&kp N4": "4"
+    "&kp N5": "5"
+    "&kp N6": "6"
+    "&kp N7": "7"
+    "&kp N8": "8"
+    "&kp N9": "9"
+    "&kp N0": "0"
+    "&kp MINUS": "-"
+    "&kp EQUAL": "="
+    "&kp LBKT": "["
+    "&kp RBKT": "]"
+    "&kp BSLH": "\\"
+    "&kp SEMI": ";"
+    "&kp SQT": "'"
+    "&kp COMMA": ","
+    "&kp PERIOD": "."
+    "&kp FSLH": "/"
+  zmk_keycode_map:
+    # Function keys
+    "F1": "F1"
+    "F2": "F2"
+    "F3": "F3"
+    "F4": "F4"
+    "F5": "F5"
+    "F6": "F6"
+    "F7": "F7"
+    "F8": "F8"
+    "F9": "F9"
+    "F10": "F10"
+    "F11": "F11"
+    "F12": "F12"

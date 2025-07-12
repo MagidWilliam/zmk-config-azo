@@ -1,25 +1,40 @@
 layout:
-  qmk_info_json: boards/shields/osman_azo/osman_azo.json
-  layout_name: default_layout
+  qmk_keyboard: adv360
 
 layers:
-  default:
-    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
-    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
-    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
-    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
+  DEFAULT:
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '[', ']', '\']
+    - [ALT, A, S, D, F, G, H, J, K, L, ';', "'", ENTER]
+    - [CTRL, Z, X, C, V, B, HOME, 'Cmd+X', DEL, DEL, N, M, ',', '.', '/', ALT]
+    - [CTRL, '', '', '', '', '', '', '', '', '', '', '', '', '', CTRL]
+    - ['', '', '', '←', 'Cmd+X', '↑', '`', {t: RAISE, h: MO, type: held}, '←', '↓', '↑', '→', '', '', '']
+    - ['', '', '', '', END, 'Cmd+V', BSPC, '', '', '', '', '', '', '', '']
 
-  raise:
-    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
-    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
-    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
-    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
+  RAISE:
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '[', ']', '\']
+    - [ALT, A, S, D, F, G, H, J, K, L, ';', "'", ENTER]
+    - [CTRL, Z, X, C, V, B, HOME, 'Cmd+X', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
+    - [CTRL, '', '', '', '', '', '', '', '', '', '', '', '', '', CTRL]
+    - ['', '', '', '←', 'Cmd+X', '↑', '`', {type: held}, '←', '↓', '↑', '→', '', '', '']
+    - ['', '', '', '', END, 'Cmd+V', BSPC, '', '', '', '', '', '', '', '']
 
-  lower:
-    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
-    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
-    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
-    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
+  LOWER:
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '[', ']', '\']
+    - [ALT, A, S, D, F, G, H, J, K, L, ';', "'", ENTER]
+    - [CTRL, Z, X, C, V, B, HOME, 'Cmd+X', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
+    - [CTRL, '', '', '', '', '', '', '', '', '', '', '', '', '', CTRL]
+    - ['', '', '', '←', 'Cmd+X', '↑', '`', {t: LOWER, h: MO, type: held}, '←', '↓', '↑', '→', '', '', '']
+    - ['', '', '', '', END, 'Cmd+V', BSPC, '', '', '', '', '', '', '', '']
+
+draw_config:
+  key_w: 60.0
+  key_h: 50.0
+  split_gap: 30.0
+  append_colon_to_layer_header: true
+  shrink_wide_legends: 6
+  footer_text: "Osman Azo - Custom split keyboard based on Advantage 360 layout"
+  glyph_tap_size: 14
+  dark_mode: false
