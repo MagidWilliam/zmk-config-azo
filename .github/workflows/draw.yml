@@ -19,5 +19,5 @@ jobs:
       output_folder: "keymap-drawer"
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       fail_on_error: false
-      parse_args: "osman_azo:'-c 8 --qmk-keyboard adv360'"
+      parse_args: ""
       draw_args: ""
