@@ -4,22 +4,22 @@ layout:
 
 layers:
   default:
-    - [{t: 'ESC'}, {t: '1'}, {t: '2'}, {t: '3'}, {t: '4'}, {t: '5'}, {t: '6'}, {t: '7'}, {t: '8'}, {t: '9'}, {t: '0'}, {t: 'BSPC'}]
-    - [{t: 'TAB'}, Q, W, E, R, T, Y, U, I, O, P, {t: '\'}]
-    - [{t: 'ALT'}, A, S, D, F, G, {t: 'HOME'}, {t: 'CMD+X'}, {t: 'DEL'}, {t: 'DEL'}, H, J, K, L, {t: ';'}, {t: ''''}]
-    - [{t: 'CTRL'}, Z, X, C, V, B, {t: 'SPC'}, {t: 'CMD+C'}, {t: 'BT CLR'}, {t: 'CAPS'}, N, M, {t: ','}, {t: '.'}, {t: '/'}, {t: 'ALT'}]
-    - [{t: 'LEFT'}, {t: 'CMD+X'}, {t: 'UP'}, {t: 'GRAVE'}, {t: 'END'}, {t: 'CMD+V'}, {t: 'BSPC'}, {t: 'RAISE'}, {t: 'LEFT'}, {t: 'DOWN'}, {t: 'UP'}, {t: 'RIGHT'}]
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
+    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
+    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
+    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
 
   raise:
-    - [{t: 'BT 0'}, {t: 'F1'}, {t: 'F2'}, {t: 'F3'}, {t: 'F4'}, {t: 'F5'}, {t: 'F6'}, {t: 'F7'}, {t: 'F8'}, {t: 'F9'}, {t: 'F10'}, {t: 'F11'}]
-    - [{t: 'BT NXT'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: '['}, {t: ']'}, {t: '7'}, {t: '8'}, {t: '9'}, {t: 'TRANS', type: trans}, {t: 'F12'}]
-    - [{t: 'BT PRV'}, {t: 'HOME'}, {t: 'PG UP'}, {t: 'PG DN'}, {t: 'END'}, {t: '('}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: ')'}, {t: '4'}, {t: '5'}, {t: '6'}, {t: '-'}, {t: '|'}, {t: 'TRANS', type: trans}]
-    - [{t: 'BT CLR'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'RESET'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'BOOTLDR'}, {t: 'RESET'}, {t: '1'}, {t: '2'}, {t: '3'}, {t: '/'}, {t: '_'}, {t: 'TRANS', type: trans}]
-    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'PSCRN'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'ENTER'}, {t: '|'}, {t: 'CTRL'}, {t: 'TRANS', type: trans}]
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
+    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
+    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
+    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
 
   lower:
-    - [{t: 'GRAVE'}, {t: 'F1'}, {t: 'F2'}, {t: 'F3'}, {t: 'F4'}, {t: 'F5'}, {t: 'F6'}, {t: 'F7'}, {t: 'F8'}, {t: 'F9'}, {t: 'F10'}, {t: 'F11'}]
-    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'PREV'}, {t: 'PP'}, {t: 'NEXT'}, {t: 'VOL+'}, {t: 'CALC'}, {t: 'NUM'}, {t: 'INS'}, {t: 'SLCK'}, {t: 'TRANS', type: trans}, {t: 'F12'}]
-    - [{t: 'TRANS', type: trans}, {t: 'LEFT'}, {t: 'UP'}, {t: 'DOWN'}, {t: 'RIGHT'}, {t: 'VOL-'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, H, J, K, L, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
-    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'MUTE'}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
-    - [{t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}, {t: 'TRANS', type: trans}]
+    - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, '\']
+    - [ALT, A, S, D, F, G, HOME, 'CMD+X', DEL, DEL, H, J, K, L, ';', "'"]
+    - [CTRL, Z, X, C, V, B, SPACE, 'CMD+C', 'BT CLR', CAPS, N, M, ',', '.', '/', ALT]
+    - ['', LEFT, 'CMD+X', UP, GRAVE, '', END, 'CMD+V', BSPC, {t: RAISE, type: held}, '', LEFT, DOWN, UP, RIGHT, '']
