@@ -1,5 +1,0 @@
-layout:
-  qmk_keyboard: adv360
-
-draw_config:
-  footer_text: "Osman Azo - Split keyboard with trackpad and encoder"

@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "config/**"
+      - "boards/**"
       - .github/workflows/draw.yml
       - keymap_drawer.config.yaml
 
@@ -13,6 +14,10 @@ jobs:
     permissions:
       contents: write
     with:
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+      fail_on_error: false
+      parse_args: "osman_azo:'-c 8 --qmk-keyboard adv360'"
+      draw_args: ""
