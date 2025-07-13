@@ -1,0 +1,6 @@
+# This file tells keymap-drawer how to handle the custom "osman_azo" keyboard.
+
+# This tells the drawer to use our custom physical layout file.
+# The path is relative to the root of your repository.
+draw_config:
+  layout_path: "osman_azo_layout.yaml"
