@@ -8,6 +8,7 @@ draw_config:
   footer_text: "Osman Azo - Split keyboard with trackpad and encoder"
 
 parse_config:
+  zmk_keyboard: adv360pro
   skip_binding_parsing: false
   layer_legend_map:
     "default": "DEF"
