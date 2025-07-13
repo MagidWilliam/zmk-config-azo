@@ -1,18 +1,36 @@
 name: Draw Keymap
+
 on:
   workflow_dispatch:
   push:
     paths:
-      - "config/**"
-      - .github/workflows/draw.yml
-      - keymap_drawer.config.yaml
+      - "config/osman_azo.keymap"
+      - "osman_azo_layout.yaml"
+      - ".github/workflows/draw.yml"
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    permissions:
-      contents: write
-    with:
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Parse keymap and draw SVG
+        uses: caksoylar/keymap-drawer-action@v1.1.1
+        with:
+          keymap_path: config/osman_azo.keymap    # Path to your ZMK keymap file
+          layout_path: osman_azo_layout.yaml    # Path to your custom layout file
+          output_path: osman_azo.svg            # Name for the generated SVG image
+
+      - name: Commit and push SVG
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add osman_azo.svg
+          # Check if there are changes to commit
+          if ! git diff --staged --quiet; then
+            git commit -m "[Draw] Update keymap diagram"
+            git push
+          else
+            echo "No changes to commit."
+          fi```

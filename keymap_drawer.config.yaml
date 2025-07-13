@@ -1,5 +1,0 @@
-parse_config:
-  zmk_keymap: "config/osman_azo.keymap"
-
-draw_config:
-  layout_path: "osman_azo_layout.yaml"
