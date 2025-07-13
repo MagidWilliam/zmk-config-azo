@@ -1,4 +1,5 @@
 draw_config:
+  dts_layout: "adv360pro.dtsi"
   key_w: 60.0
   key_h: 50.0
   split_gap: 30.0
