@@ -20,8 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: osman_azo_left
+    shield: adv360pro_left
   - board: nice_nano_v2
-    shield: osman_azo_right
+    shield: adv360pro_right
   - board: nice_nano_v2
     shield: settings_reset
