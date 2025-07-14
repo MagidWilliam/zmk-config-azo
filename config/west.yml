@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch
-      revision: fix-remove-log
+      revision: rotate-90
   self:
     path: config
