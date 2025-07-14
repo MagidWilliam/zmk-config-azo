@@ -1,3 +1,0 @@
-# Map osman_azo to use the advantage 360 layout
-osman_azo:
-  default_transform: {qmk_keyboard: adv360}
