@@ -1,7 +1,7 @@
 if SHIELD_OSMAN_AZO_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "osman_azo_R"
+    default "osman_azo"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
      default y
