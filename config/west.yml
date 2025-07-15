@@ -11,7 +11,7 @@ manifest:
       import: app/west.yml
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
-      # branch
+      # branch:
       revision: fix-sleep-awake
   self:
     path: config
