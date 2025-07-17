@@ -52,7 +52,7 @@
         dr-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
         status = "okay";
         rotate-90;
-        sensitivity = <128>;
+        sensitivity = <256>;
         refresh-rate-active = <5>;
         refresh-rate-idle = <20>;
     };
