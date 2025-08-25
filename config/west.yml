@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch
-      revision: feat/add-infinite-scroll
+      revision: feat/2nd-dragdrop
   self:
     path: config
