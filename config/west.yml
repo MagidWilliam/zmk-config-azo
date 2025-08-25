@@ -12,6 +12,6 @@ manifest:
     - name: zmk-driver-azoteq
       remote: ahmed-m-osman1
       # branch
-      revision: feat/2nd-dragdrop
+      revision: main
   self:
     path: config
