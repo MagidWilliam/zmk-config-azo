@@ -3,10 +3,10 @@ if SHIELD_OSMAN_AZO_RIGHT
 config ZMK_KEYBOARD_NAME
     default "osman_azo"
 
+endif
+
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
      default y
-
-endif
 
 if SHIELD_OSMAN_AZO_LEFT
 
